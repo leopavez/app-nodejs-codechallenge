@@ -1,3 +1,26 @@
+# Solution
+
+The proposed solution is the development of 2 microservices: one for handling transactions (creation and update of status) and the other to validate the transaction.
+
+Both microservices use hexagonal architecture to divide the microservice structure into layers to allow for scalability, flexibility and smooth code maintenance, and are developed using solid principles and design patterns
+
+The transactions-ms contain unit-test to 100% coverage.
+
+#### Design patterns and SOLID principles used in the solution:
+- Dependency inversion: We use interfaces for repositories and services.
+- Single Responsibility: Each class has a single responsibility.
+- Repository Pattern: To manage the persistence of entities.
+- Use Case Pattern: Encapsulates the business rules and separates the logic from the infrastructure.
+- Strategy Pattern: It allows us to add strategies without touching the main code.
+
+#### How to run services
+- docker compose up -d
+- cd /transactions-ms and npm run start:dev
+- cd /antifraud-ms and npm run start:dev
+
+Postgre will automatically pull up the DB transactions since it was added to the docker compose.
+
+
 # Yape Code Challenge :rocket:
 
 Our code challenge will let you marvel us with your Jedi coding skills :smile:. 
